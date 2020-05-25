@@ -4,11 +4,8 @@ node_js:
 services:
   - docker
 
-before_install:
-  - npm install
 
 script:
-  - npm run build
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t christine2591/test:latest .
   - docker push christine2591/test:latest
