@@ -6,3 +6,5 @@ services:
         ports:
             - "2333:80"
         restart: on-failure
+        volumes:
+            - ./:/web/usr/share/nginx/html
