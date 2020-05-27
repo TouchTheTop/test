@@ -2,9 +2,9 @@ version: "3.7" # 这个是配置文件的版本，不同的版本号声明方式
 services:
     info:
         container_name: test
-        image: christine2591/test:latest
+        build: .
         ports:
             - "2333:80"
         restart: on-failure
         volumes:
-            - ./:/web/usr/share/nginx/html
+            - /Users/jiatui/Documents/study/test/:/usr/share/nginx/html
